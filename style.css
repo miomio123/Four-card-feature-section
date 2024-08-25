@@ -1,0 +1,110 @@
+body {
+    background: white;
+    color: darkgray;
+    padding: 24px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .light {
+    font-weight: 200;
+  }
+  
+  h2 {
+    color: black;
+    font-size: 32px;
+    margin: 0;
+  }
+  h3{
+    color: black;
+    font-size: 20px;
+  }
+  
+  /* HEADER */
+  .text-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 60px;
+    width: 100%;
+  }
+  
+  .text-container p {
+    color: rgb(163, 165, 174);
+    
+  }
+  
+  /* CARDS */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      ". teambuilder ."
+      "supervisor . calculator"
+      ". karma .";
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background-color: white;
+    font-weight: 700;
+    color: gray;
+    padding: 32px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+    transition: transform 0.3s ease;
+    height: 200px;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: auto;
+    height: 50px;
+  }
+  
+  /* Specific Card Styles */
+  .supervisor {
+    grid-area: supervisor;
+    border-top: 4px solid hsl(180, 62%, 55%);
+  }
+  
+  .teambuilder {
+    grid-area: teambuilder;
+    border-top: 4px solid hsl(0, 78%, 62%);
+    margin-bottom: -140px; /* Move down */
+  }
+  
+  .karma {
+    grid-area: karma;
+    border-top: 4px solid hsl(34, 97%, 64%);
+    margin-top: -140px; /* Move up */
+  }
+  
+  .calculator {
+    grid-area: calculator;
+    border-top: 4px solid hsl(212, 86%, 64%);
+  }
+  
+  /* Media Query for screens less than 375px */
+  @media (max-width: 750px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "teambuilder"
+        "supervisor"
+        "calculator"
+        "karma";
+    }
+    .teambuilder, .karma {
+      margin: 0; /* Remove the negative margin */
+    }
+  }
