@@ -1,6 +1,6 @@
 body {
-  background: white;
-  color: darkgray;
+  background: hsl(0, 0%, 98%);
+  color: hsl(229, 6%, 66%);
   padding: 24px;
   font-family: 'Poppins', sans-serif;
   margin-top: 40px;
@@ -8,18 +8,19 @@ body {
 
 .light {
   font-weight: 200;
+  color: hsl(229, 6%, 66%);
 }
 
 h2 {
-  color: black;
+  color: hsl(234, 12%, 34%);
   font-size: 32px;
   margin: 0;
   font-weight: 600;
 }
 h3{
-  color: black;
+  color: hsl(234, 12%, 34%);
   font-size: 18px;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 /* HEADER */
